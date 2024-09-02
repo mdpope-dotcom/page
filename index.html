@@ -1,20 +1,63 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>tailz</title>
+    <title><3</title>
     <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <audio id="background-music" autoplay loop>
-        <source src="https://rr4---sn-4g5edndz.googlevideo.com/videoplayback?expire=1725244791&ei=F9HUZoDsHfmiobIP1sPsyAM&ip=2804%3A7f0%3A44e%3Af94%3A353d%3A452d%3A70b0%3A9e02&id=o-AKpMSjdy0sy-XU_CYAHStdfF8pbsS22_m9XV_So_eMbg&itag=18&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&bui=AQmm2ey-gC7iC7jUDwQ1sEYb3PtuRVHdjtOrtpvb8DnVKrUYbSUcrxTW7IGi4o1xek6A54dQlJ53xaoX&spc=Mv1m9pv2sGi36hIMgxY3vlBD-AohVHEmf4Uoe4StBgAM9Nj5tLtV-Ks&vprv=1&svpuc=1&mime=video%2Fmp4&ns=DDVLNdeAOkRl_pG8eZkNeO4Q&rqh=1&gir=yes&clen=14587272&ratebypass=yes&dur=162.144&lmt=1718262357120349&c=WEB_CREATOR&sefc=1&txp=4538434&n=TEGC2YLIWznQ7Q&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cspc%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cratebypass%2Cdur%2Clmt&sig=AJfQdSswRQIgWn9O8QvRZc0CycZwhzUL1s4A2eia3KBnK1GgjKIH3SsCIQCbR6biCoiE03qe_CPCfi_at_5bGTeV3kE08eJcdJSW5w%3D%3D&title=BLOODIE+x+DudeyLo+x+DD+Osama+x+Sugarhill+Ddot+x+Dee+Play4Keeps+-+Stop+Running+%28Official+Music+Video%29&rm=sn-8p8v-bg0lk7z,sn-8p8v-bg0ls7l,sn-bg0eek7z&rrc=79,79,104&fexp=24350516,24350518,24350556,24350561&req_id=9234da576364a3ee&cmsv=e&redirect_counter=3&cms_redirect=yes&ipbypass=yes&mh=lY&mip=192.162.60.26&mm=30&mn=sn-4g5edndz&ms=nxu&mt=1725222758&mv=m&mvi=4&pl=24&lsparams=ipbypass,mh,mip,mm,mn,ms,mv,mvi,pl&lsig=ABPmVW0wRgIhANxBYQVgEFOfkpQxRxAMSEHozwemKxo77T8ibO8Kg2BMAiEA7rin8D4V0RquloTAkoL8FcUccKALKI1MCr8oQQOcO10%3D" type="audio/mpeg">
-        Your browser does not support the audio tag.
-    </audio>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
 
-    <div class="content">
-        <h1>enjoy </h1>
-        <p>...</p>
+        #image-container {
+            position: relative;
+            width: 80%; /* Set a width for the image container */
+            max-width: 600px; /* Set a maximum width */
+            height: 400px; /* Set a height for the image container */
+            overflow: hidden;
+        }
+
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .image.active {
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="image-container">
+        <img class="image active" src="vile.jfif" alt="Flashing Image">
     </div>
+
+    <script>
+        let isFlashing = true;  // Control the flashing effect
+        const image = document.querySelector('.image');  // Target the image
+
+        // Flash effect function
+        setInterval(() => {
+            if (isFlashing) {
+                image.classList.toggle('active'); // Toggle visibility
+            }
+        }, 500); // Change visibility every 500 milliseconds (0.5 seconds)
+    </script>
 </body>
+
 </html>
