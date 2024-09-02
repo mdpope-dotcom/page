@@ -43,18 +43,21 @@
 
 <body>
     <div id="image-container">
-        <img class="image active" src="vile.jfif" alt="Flashing Image"> <!-- Update file name and format if needed -->
+        <img class="image active" src="vile.jfif" alt="vile.jfif"> <!-- Replace with your first image -->
+        <img class="image" src="image2.jpg" alt="Image 2"> <!-- Replace with your second image -->
+        <img class="image" src="image3.jpg" alt="Image 3"> <!-- Replace with your third image -->
     </div>
 
     <script>
-        let isFlashing = true;  // Control the flashing effect
-        const image = document.querySelector('.image');  // Target the image
+        let currentIndex = 0; // Start with the first image
+        const images = document.querySelectorAll('.image'); // Get all image elements
+        const totalImages = images.length;
 
         // Flash effect function
         setInterval(() => {
-            if (isFlashing) {
-                image.classList.toggle('active'); // Toggle visibility
-            }
+            images[currentIndex].classList.remove('active'); // Hide the current image
+            currentIndex = (currentIndex + 1) % totalImages; // Move to the next image
+            images[currentIndex].classList.add('active'); // Show the next image
         }, 500); // Change visibility every 500 milliseconds (0.5 seconds)
     </script>
 </body>
